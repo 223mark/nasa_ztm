@@ -5,9 +5,9 @@ on:
   # push to our repo
   push:
     # this will trigger when some code is push to one of these branches
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 # workflow is made of one or more of these jobs
 jobs:
