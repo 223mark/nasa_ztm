@@ -1,29 +1,29 @@
-# name of our workflow that will show up on github
-name: NASA Project CI
-# control different trigger
-on:
-  # push to our repo
-  push:
-    # this will trigger when some code is push to one of these branches
-    branches: [main]
-  pull_request:
-    branches: [main]
+# # name of our workflow that will show up on github
+# name: NASA Project CI
+# # control different trigger
+# on:
+#   # push to our repo
+#   push:
+#     # this will trigger when some code is push to one of these branches
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
 
-# workflow is made of one or more of these jobs
-jobs:
-  build:
-    # operation system
-    runs-on: window-latest
-    steps:
-      # differents action that will trigger in os
-      #   actions/checkout is from github and @v2 is checkout's version
-      - uses: actions/checkout@v2
-      - name: Use Node.js version 18
-        uses: actions/setup-node@v2
-        with:
-          node-version: "18"
-      - run: npm install
-      - run: npm run build --prefix client
+# # workflow is made of one or more of these jobs
+# jobs:
+#   build:
+#     # operation system
+#     runs-on: window-latest
+#     steps:
+#       # differents action that will trigger in os
+#       #   actions/checkout is from github and @v2 is checkout's version
+#       - uses: actions/checkout@v2
+#       - name: Use Node.js version 18
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: "18"
+#       - run: npm install
+#       - run: npm run build --prefix client
 
-        # deploy:
-  #     needs: build
+#         # deploy:
+#   #     needs: build
